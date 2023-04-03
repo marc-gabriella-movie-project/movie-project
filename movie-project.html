@@ -12,14 +12,33 @@
 <div class="page-wrapper">
     <div class="mobile-menu-container">
         <div class="mobile-menu-overlay"></div>
-        <div class="mobile-menu-wrapper">
-            <!--      MENU ITEMS LIVE HERE      -->
+        <div class="mobile-menu-wrapper justify-center text-center align-center">
+            <div class="row">
+                <div class="column">
+                    <h2>Add a movie to favorites</h2>
+                    <label for="title">Title:</label>
+                    <input id="title" type="search" placeholder="title">
+                    <label for="genre">Genre:</label>
+                    <select id="genre">
+                        <option value="Crime">Crime</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="SciFi">Sci-Fi</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Romance">Romance</option>
+                    </select>
+                    <label for="rating">Rating:</label>
+                    <input id="rating" type="number" min="0" max="5" placeholder="0-5">
+                </div>
+            </div>
         </div>
     </div>
     <header class="container">
         <div class="row grow align-center">
             <div class="column">
-                <h2 class="logo">COMPANY LOGO</h2>
+                <h2 class="logo">CODEFLIX</h2>
             </div>
             <div class="column">
                 <nav class="navigation-wrapper">
@@ -108,7 +127,7 @@
                         <div class="slide left">
                             <div id="movie2" class="movie-poster">
                                 <div class="image-wrapper">
-                                    <img src="images/IT_ends_chapter-two.jpg" alt="scary clown">
+                                    <img src="images/princess_Frog_Poster.jpg" alt="scary clown">
                                 </div>
                                 <div class="movie-details">
                                     <strong>IT Chapter Two (2019)</strong>
@@ -146,7 +165,7 @@
                         <div class="slide active">
                             <div id="movie3" class="movie-poster">
                                 <div class="image-wrapper">
-                                    <img src="images/IT_ends_chapter-two.jpg" alt="scary clown">
+                                    <img src="images/starwars_TROS_Poster.jpg" alt="scary clown">
                                 </div>
                                 <div class="movie-details">
                                     <strong>IT Chapter Two (2019)</strong>
@@ -184,7 +203,7 @@
                         <div class="slide right">
                             <div id="movie4" class="movie-poster">
                                 <div class="image-wrapper">
-                                    <img src="images/IT_ends_chapter-two.jpg" alt="scary clown">
+                                    <img src="images/starwars_RogueOne_Poster.jpg" alt="scary clown">
                                 </div>
                                 <div class="movie-details">
                                     <strong>IT Chapter Two (2019)</strong>
@@ -222,7 +241,7 @@
                         <div class="slide right">
                             <div id="movie5" class="movie-poster">
                                 <div class="image-wrapper">
-                                    <img src="images/IT_ends_chapter-two.jpg" alt="scary clown">
+                                    <img src="images/venom_Poster.jpg" alt="scary clown">
                                 </div>
                                 <div class="movie-details">
                                     <strong>IT Chapter Two (2019)</strong>
@@ -369,6 +388,6 @@
     </section>
 </div>
 
-<script src="js/movie-project.js"></script>
+<script type="module" src="js/movie-project.js"></script>
 </body>
 </html>
