@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    /*border: 10px solid #000;*/
+    /*border-radius: 500px;*/
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+::placeholder {
+    color: unset;
+    font: inherit;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: unset;
+}
+
+/*not resets*/
+/*.page-wrapper {*/
+/*    min-height: 100vh;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    row-gap: 40px;*/
+/*}*/
+
+/*.page-wrapper.all-centered {*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.image-size-change {*/
+/*    width: 500px;*/
+/*}*/
+/*not resets end*/
+
+
+
+/*!*Copy code Certainly! Here are a few examples of CSS resets:*/
+
+/*Eric Meyer's Reset CSS*/
+/*html, body, div, span, applet, object, iframe,*/
+/*h1, h2, h3, h4, h5, h6, p, blockquote, pre,*/
+/*a, abbr, acronym, address, big, cite, code,*/
+/*del, dfn, em, img, ins, kbd, q, s, samp,*/
+/*small, strike, strong, sub, sup, tt, var,*/
+/*b, u, i, center,*/
+/*dl, dt, dd, ol, ul, li,*/
+/*fieldset, form, label, legend,*/
+/*table, caption, tbody, tfoot, thead, tr, th, td {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    border: 0;*/
+/*    outline: 0;*/
+/*    font-size: 100%;*/
+/*    vertical-align: baseline;*/
+/*    background: transparent;*/
+/*}*/
+
+/*!*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css *!*/
+
+/*!* Document*/
+/*   ========================================================================== *!*/
+
+/*!***/
+/* * 1. Correct the line height in all browsers.*/
+/* * 2. Prevent adjustments of font size after orientation changes in iOS.*/
+/* *!*/
+
+/*html {*/
+/*    line-height: 1.15; !* 1 *!*/
+/*    -webkit-text-size-adjust: 100%; !* 2 *!*/
+/*    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
+/*}*/
+
+/*!* Sections*/
+/*   ========================================================================== *!*/
+
+/*!***/
+/* * Remove the margin in all browsers.*/
+/* *!*/
+
+/*body {*/
+/*    margin: 0;*/
+/*}*/
+
+/*!***/
+/* * Render the `main` element consistently in IE.*/
+/* *!*/
+
+/*main {*/
+/*    display: block;*/
+/*}*/
+
+/*!***/
+/* * Correct the font size and margin on `h1` elements within `section` and*/
+/* * `article` contexts in Chrome, Firefox, and Safari.*/
+/* *!*/
+
+/*h1 {*/
+/*    font-size: 2em;*/
+/*    margin: 0.67em 0;*/
+/*}*/
+
+/*!* Grouping content*/
+/*   ========================================================================== *!*/
+
+/*1. Add the correct box sizing in Firefox.*/
+/*2. Show the overflow in Edge and IE.*/
+
+/*hr {*/
+/*    box-sizing: content-box; !* 1 *!*/
+/*    height: 0; !* 1 *!*/
+/*    overflow: visible; !* 2 *!*/
+/*}*/
+
+
+/*Normalize.css - A modern alternative to traditional CSS resets that uses sensible defaults to normalize styles across browsers. Normalize.css has become one of the most widely used CSS resets.*/
+
+/*                Eric Meyer's Reset CSS - One of the earliest CSS resets that has been widely used for many years. It aims to remove all default styling from HTML elements to provide a clean slate for styling.*/
+
+/*Yahoo's YUI Reset CSS - A minimalist reset that removes all margins, paddings, borders, and backgrounds from HTML elements.*/
+
+/*HTML5 Boilerplate - A front-end web development template that includes a CSS reset as well as many other useful features for building modern web applications.s:*/
+
+/*                    Normalize.css - A modern alternative to traditional CSS resets that uses sensible defaults to normalize styles across browsers. Normalize.css has become one of the most widely used CSS resets.*/
+
+/*                                    Eric Meyer's Reset CSS - One of the earliest CSS resets that has been widely used for many years. It aims to remove all default styling from HTML elements to provide a clean slate for styling.*/
+
+/*Yahoo's YUI Reset CSS - A minimalist reset that removes all margins, paddings, borders, and backgrounds from HTML elements.*/
+
+/*HTML5 Boilerplate - A front-end web development template that includes a CSS reset as well as many other useful features for building modern web applications.*/

@@ -1,0 +1,34 @@
+{
+  "favorites": [
+    {
+      "id": 1,
+      "title": "IT ends: Chapter Two",
+      "genre": "Horror",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "title": "Star Wars: The Rise of Skywalker",
+      "genre": "Fantasy",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "title": "Star Wars: Rogue One",
+      "genre": "Fantasy",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "title": "The Princess and the Frog",
+      "genre": "Drama",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "title": "Venom",
+      "genre": "Thriller",
+      "rating": 5
+    }
+  ]
+}

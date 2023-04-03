@@ -1,0 +1,129 @@
+body {
+    position: relative;
+    height: 100%;
+}
+
+.page-wrapper{
+}
+
+#featured-movies {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+::selection{
+    color:#181818;
+    background-color:#fffd6b;
+}
+
+.movie-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movie-poster {
+    /*background-color: lightgrey;*/
+    height: 400px;
+    width: 100vh;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-details{
+    padding: 20px;
+    background: linear-gradient(90deg, #202020 20%, #222);
+    width: 500px;
+    max-height: 250px;
+    border-radius: 0 10px 10px 0;
+}
+
+.carousel-details strong {
+    color: #e4e4e4;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.rating i {
+    color: #ffdf00;
+    margin: 0 2px;
+}
+.carousel-details p {
+    color: #8f8f8f;
+    font-size: 0.9rem;
+    margin: 20px 0 10px 0;
+}
+
+.card-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card-btns a {
+    min-width: 160px;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+}
+.play-btn {
+    background-color: #0b7bf7;
+}
+.play-btn i {
+    margin-right: 10px;
+}
+
+.trailer-btn {
+    color: #cecece;
+    opacity: 0.8;
+    background-color: rgba(0,0,0,2);
+    border: 1px solid #363636;
+}
+
+.card-btns a:hover {
+    background-color: #f8346f;
+    transition: all ease .3s;
+    color: #fff;
+    border: none;
+    opacity: 1;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
