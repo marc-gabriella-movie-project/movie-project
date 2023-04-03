@@ -13,7 +13,7 @@ arrows.forEach(function (arrow){
        }
         // console.log(`going ${direction}`);
        // get the active slide
-        let activeSlide = slideMask.querySelector('.slide.active');
+        let activeSlide = slidesContainer.querySelector('.slide.active');
         activeSlide.classList.remove('active');
        // redefining what the active slide is
         if (direction === 'left') {
@@ -30,13 +30,18 @@ arrows.forEach(function (arrow){
         // remove left/right classes from active
         activeSlide.classList.remove('left', 'right');
         // looping thru each sibling and assigning array
-        let previousSiblings = activeSlide.previousElementSibling;
-        // get all previous element siblings
+        let previousSibling = activeSlide.previousElementSibling;
+        //get all previous element siblings
         let previousSlides = [];
-        while (previousSiblings) {
-            previousSlides.unshift(previousSiblings);
-            previousSiblings = previousSiblings.previousElementSibling;
+        while (previousSibling) {
+            previousSlides.unshift(previousSibling);
+            previousSibling = previousSibling.previousElementSibling;
         }
+        //loop through previous slides and add left class, remove right class
+        previousSlides.forEach(function(slide){
+            slide.classList.remove('right');
+            slide.classList.add('left');
+        });
         // get next sibling of active slide
         let nextSibling = activeSlide.nextElementSibling;
         // get all next element siblings
