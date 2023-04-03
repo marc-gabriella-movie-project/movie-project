@@ -38,7 +38,6 @@ pageWrapper.addEventListener('click', function(event){
 let carouselArrows = document.querySelectorAll('.slide-arrow');
 let carousel = document.querySelector('.carousel');
 let slideMask = document.querySelector('.slide-mask');
-
 carouselArrows.forEach(function(arrow){
     // start a direction variable
     let direction;
@@ -50,7 +49,7 @@ carouselArrows.forEach(function(arrow){
         } else {
             direction = 'right';
         }
-        console.log(`Going ${direction}`);
+        // console.log(`Going ${direction}`);
         // get the active slide
         let activeSlide = slideMask.querySelector('.slide.active');
         // remove active class from active slide
