@@ -15,6 +15,67 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+#slider-mask {
+    overflow: hidden;
+    align-self: stretch;
+    flex: 1 0 0; /* ability to grow */
+    position: relative;
+}
+
+.slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.arrow {
+    color: red;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* centers it with position absolute */
+    left: 10px;
+    cursor: pointer;
+}
+
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* centers it with position absolute */
+    right: 10px;
+    cursor: pointer;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease .3s;
+    border: 2px solid white;
+}
+
+.slide.left {
+    left: -100%;
+}
+
+.slide.right {
+    right: 100%;
+}
+
 ::selection{
     color:#181818;
     background-color:#fffd6b;
