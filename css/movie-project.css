@@ -308,3 +308,11 @@ img.slide-arrow.right {
     border: none;
     opacity: 1;
 }
+
+/** DROP DOWN FILTER **/
+.dropdown-container {
+    display: flex;
+    justify-content: end;
+    flex-wrap: nowrap;
+}
+
