@@ -89,18 +89,18 @@ body {
 .movie-poster {
     /*background-color: lightgrey;*/
     height: 400px;
-    width: 100vh;
+    width: 100%;
     display: flex;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     overflow: hidden;
-    flex-direction: row;
+    /*flex-direction: row;*/
     align-items: center;
 }
 
 .movie-poster img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .carousel-details{
@@ -178,10 +178,9 @@ body {
 }
 
 .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-slide img {

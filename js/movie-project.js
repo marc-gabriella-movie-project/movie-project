@@ -1,18 +1,20 @@
 let arrows = document.querySelectorAll('.arrow');
+let slideMask = document.querySelector('.slider-mask');
+let slidesContainer = document.querySelector('.slides'); // may need to re
 
 arrows.forEach(function (arrow){
     let direction;
-    let slideMask = document.querySelector('.slider-mask');
-    let slidesContainer = document.querySelector('.slides'); // may need to rework
+
     arrow.addEventListener('click', function (event){
        if (event.target.classList.contains('arrow-left')) {
            direction = 'left';
        } else {
            direction = 'right';
        }
+        // console.log(`going ${direction}`);
        // get the active slide
         let activeSlide = slideMask.querySelector('.slide.active');
-       activeSlide.classList.remove('active');
+        activeSlide.classList.remove('active');
        // redefining what the active slide is
         if (direction === 'left') {
             activeSlide = activeSlide.previousElementSibling;
