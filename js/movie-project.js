@@ -1,35 +1,75 @@
-let arrows = document.querySelectorAll('.arrow');
-let slideMask = document.querySelector('.slider-mask');
-let slidesContainer = document.querySelector('.slides'); // may need to re
+/////////////// START Mobile Menu ///////////////////////
+let pageWrapper = document.querySelector('.page-wrapper');
+let toggleMenu = document.querySelector('.das-burger-wrapper');
+let menuBg = document.querySelector('.mobile-menu-overlay');
+toggleMenu.addEventListener('click', function(){
+    pageWrapper.classList.toggle('mobile-menu-open');
+});
+menuBg.addEventListener('click', function(){
+    pageWrapper.classList.toggle('mobile-menu-open');
+});
+/////////////// END Mobile Menu ///////////////////////
 
-arrows.forEach(function (arrow){
+/////////////// START Dropdowns ///////////////////////
+let dropdowns = document.querySelectorAll('[data-dropdown="parent"]');
+dropdowns.forEach(function(dropdown){
+    let toggle = dropdown.querySelector('[data-dropdown="toggle"]');
+    toggle.addEventListener('click', function(){
+        dropdowns.forEach(function(element){
+            // if already has class of open and is not this element, remove it
+            if (element.classList.contains('open') && element !== dropdown) {
+                element.classList.remove('open');
+            }
+        })
+        dropdown.classList.toggle('open');
+    });
+});
+pageWrapper.addEventListener('click', function(event){
+    //if the event target is not a dropdown, close all dropdowns
+    if (!event.target.closest('[data-dropdown="parent"]')) {
+        dropdowns.forEach(function(dropdown){
+            dropdown.classList.remove('open');
+        });
+    }
+});
+/////////////// END Dropdowns ///////////////////////
+
+/////////////// START Carousel ///////////////////////
+let carouselArrows = document.querySelectorAll('.slide-arrow');
+let carousel = document.querySelector('.carousel');
+let slideMask = document.querySelector('.slide-mask');
+carouselArrows.forEach(function(arrow){
+    // start a direction variable
     let direction;
-
-    arrow.addEventListener('click', function (event){
-       if (event.target.classList.contains('arrow-left')) {
-           direction = 'left';
-       } else {
-           direction = 'right';
-       }
-        // console.log(`going ${direction}`);
-       // get the active slide
-        let activeSlide = slidesContainer.querySelector('.slide.active');
+    // add event listener to each arrow
+    arrow.addEventListener('click', function(event){
+        // if the arrow clicked has a class of left, set direction to left, otherwise set to right
+        if (event.target.classList.contains('left')) {
+            direction = 'left';
+        } else {
+            direction = 'right';
+        }
+        // console.log(`Going ${direction}`);
+        // get the active slide
+        let activeSlide = slideMask.querySelector('.slide.active');
+        // remove active class from active slide
         activeSlide.classList.remove('active');
-       // redefining what the active slide is
+        // if direction is left, get previous sibling, otherwise get next sibling and reassign to activeSlide
         if (direction === 'left') {
             activeSlide = activeSlide.previousElementSibling;
         } else {
             activeSlide = activeSlide.nextElementSibling;
         }
-        // if end of the carousel/ active slide is undefined
+        //if activeSlide is null, we are at the end of the carousel
         if (!activeSlide) {
-            activeSlide = direction === 'left' ? slidesContainer.lastElementChild : slidesContainer.firstElementChild;
+            //if direction is left, get last slide, otherwise get first slide
+            activeSlide = direction === 'left' ? slideMask.lastElementChild : slideMask.firstElementChild;
         }
-        // add active to new slide
+        //add active to the new active slide
         activeSlide.classList.add('active');
-        // remove left/right classes from active
+        // remove left and right classes from active slide
         activeSlide.classList.remove('left', 'right');
-        // looping thru each sibling and assigning array
+        // get previous sibling of active slide
         let previousSibling = activeSlide.previousElementSibling;
         //get all previous element siblings
         let previousSlides = [];
@@ -55,5 +95,6 @@ arrows.forEach(function (arrow){
             slide.classList.remove('left');
             slide.classList.add('right');
         });
-   });
+    });
 });
+/////////////// END Carousel ///////////////////////

@@ -1,80 +1,229 @@
-body {
+header.container {
+    background-color: #eee;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    min-height: 60px;
     position: relative;
-    height: 100%;
+    z-index: 3;
 }
 
-.page-wrapper{
-}
-
-#featured-movies {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-#slider-mask {
-    overflow: hidden;
-    align-self: stretch;
-    flex: 1 0 0; /* ability to grow */
+.das-burger-wrapper {
+    height: 16px;
+    width: 27px;
     position: relative;
-}
-
-.slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.arrow {
-    color: red;
-    font-size: 20px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-}
-
-.arrow-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); /* centers it with position absolute */
-    left: 10px;
+    /*background-color: grey;*/
     cursor: pointer;
+    z-index:9;
 }
 
-.arrow-right {
+.menu-line {
+    height: 2px;
+    width: 27px;
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%); /* centers it with position absolute */
-    right: 10px;
-    cursor: pointer;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: all ease .3s;
-    border: 2px solid white;
 }
 
+.das-burger-wrapper:hover .menu-line {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.menu-line.top {
+    top:0;
+}
+.page-wrapper.mobile-menu-open .menu-line.top {
+    transform-origin: left;
+    transform: rotate(45deg) translate(3px, -5px);
+    background-color: rgba(0, 0, 0, 1);
+}
+.menu-line.middle {
+    top: 50%;
+}
+.page-wrapper.mobile-menu-open .menu-line.middle {
+    transform: rotate(-45deg);
+    background-color: rgba(0, 0, 0, 1);
+}
+.menu-line.bottom {
+    top: 100%;
+}
+.page-wrapper.mobile-menu-open .menu-line.bottom {
+    transform-origin: right;
+    transform: rotate(45deg) translate(-1px, 3px);
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    pointer-events: none;
+    z-index: 8;
+}
+
+.mobile-menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0);
+    transition: all ease .3s;
+}
+.mobile-menu-wrapper {
+    position: absolute;
+    top: 0;
+    right: -500px;
+    width: 400px;
+    height: 100%;
+    border-left: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px -10px #000;
+    background-color: #eee;
+    transition: all ease .3s;
+}
+
+.page-wrapper.mobile-menu-open .mobile-menu-container {
+    pointer-events: all;
+}
+.page-wrapper.mobile-menu-open .mobile-menu-overlay {
+    background-color: rgba(255,255,255,0.7);
+}
+.page-wrapper.mobile-menu-open .mobile-menu-wrapper {
+    right: 0px;
+}
+
+nav.navigation-wrapper {
+    display: flex;
+    align-items:center;
+    justify-content: end;
+    gap: 15px;
+}
+
+/* DROPDOWN MENU */
+.dropdown-parent {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+}
+.dropdown-toggle {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 5px;
+}
+.dropdown-menu {
+    position: absolute;
+    opacity: 0;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.5);
+    top: 100%;
+    right: 0px;
+    min-width: 200px;
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.dropdown-menu p {
+    text-align: center;
+}
+[data-dropdown="parent"] {
+    position: relative;
+}
+[data-dropdown="menu"] {
+    pointer-events: none;
+    transition: all ease .3s;
+}
+[data-dropdown="parent"].open [data-dropdown="menu"] {
+    pointer-events: all;
+    opacity: 1;
+}
+.arrow-icon {
+    width: 10px;
+    transition: all ease .3s;
+}
+[data-dropdown="parent"].open .arrow-icon {
+    transform: rotate(-180deg);
+}
+.carousel {
+    margin: 30px 0;
+    height: 50vh;
+    background-color:#eee;
+    position: relative;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+    transition: all ease .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:3px solid #ffffff;
+}
 .slide.left {
     left: -100%;
 }
-
 .slide.right {
-    right: 100%;
+    left:100%;
 }
+.slide-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.slide-arrow-wrapper {
+    position: absolute;
+    top: 50%;
+}
+.slide-arrow-wrapper.left {
+    left: 10px;
+}
+.slide-arrow-wrapper.right {
+    right: 10px;
+}
+img.slide-arrow {
+    width: 30px;
+    opacity: .5;
+    transition: all ease .3s;
+    cursor: pointer;
+}
+img.slide-arrow:hover {
+    opacity: 1;
+}
+img.slide-arrow.left {
+    transform: rotate(90deg)
+}
+img.slide-arrow.right {
+    transform: rotate(-90deg)
+}
+
+.grid-image-wrapper {
+    height: 20vh;
+    width: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-poster {
+    height: 100%;
+    width: 70%;
+    object-fit: cover;
+}
+#grid-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/************/
 
 ::selection{
     color:#181818;
@@ -89,18 +238,18 @@ body {
 .movie-poster {
     /*background-color: lightgrey;*/
     height: 400px;
-    width: 100%;
+    width: 100vh;
     display: flex;
-    /*border-radius: 10px;*/
+    border-radius: 10px;
     overflow: hidden;
-    /*flex-direction: row;*/
+    flex-direction: row;
     align-items: center;
 }
 
 .movie-poster img {
     width: 100%;
     height: 400px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .carousel-details{
@@ -178,9 +327,10 @@ body {
 }
 
 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
 }
 
 .swiper-slide img {
