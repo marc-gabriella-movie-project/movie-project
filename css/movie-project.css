@@ -53,6 +53,12 @@ p, h1, h2 {
     z-index:9;
 }
 
+.rating-add {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
 .mobile-menu-wrapper h2 {
     text-align: center;
 }
@@ -252,12 +258,35 @@ img.slide-arrow.right {
     display: flex;
     justify-content: center;
     align-items: center;
+    position:relative;
+}
+.remove-btn {
+    position: absolute;
+    top: 0;
+    right: 150px;
+    z-index: 10;
+    background-color: #01f507;
+    border-radius: 99999px;
+    height: 25px;
+    width: 25px;
+}
+.edit-btn {
+    position: absolute;
+    top: 25px;
+    right: 150px;
+    z-index: 10;
+    background-color: #ffdb00;
+    border-radius: 99999px;
+    height: 25px;
+    width: 25px;
 }
 
 .grid-poster {
     height: 100%;
     width: 70%;
     object-fit: cover;
+    position: relative;
+    z-index: 5;
 }
 #grid-row {
     display: flex;

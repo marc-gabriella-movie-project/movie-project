@@ -1,8 +1,8 @@
 // getters
-export const getMovies = async () => {
+export const getFavorites = async () => {
     try {
         let url = `http://localhost:3000/favorites`;
-        let response = await fetch(url, options);
+        let response = await fetch(url);
         let data = await response.json();
         return data;
     } catch(error){
@@ -89,4 +89,25 @@ export const patchFavorite = async (id, movie) => {
         console.log(error);
     }
 }
+
+export const removeMovie = async(id) => {
+    try {
+        if (!id) {
+            throw new Error('You must provide an id');
+        }
+        let url = `http://localhost:3000/favorites/${id}`;
+        let options = {
+            method: "DELETE",
+            headers: {
+                "Content-Type":"application/json"
+            }
+        };
+        let response = await fetch(url, options);
+        let data = await response.json();
+        return data;
+    } catch(error){
+        console.log(error);
+    }
+}
 //renders
+// renderCarousel

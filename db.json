@@ -4,31 +4,36 @@
       "id": 1,
       "title": "IT ends: Chapter Two",
       "genre": "Horror",
-      "rating": 5
+      "rating": 5,
+      "description": "In this horror sequel, the members of the Losers Club return to Derry, Maine to confront the evil entity that terrorized them as children."
     },
     {
       "id": 2,
       "title": "Star Wars: The Rise of Skywalker",
       "genre": "Fantasy",
-      "rating": 5
+      "rating": 5,
+      "description": "The final chapter of the Skywalker saga sees the Resistance face off against the First Order one last time, while Rey confronts her own destiny."
     },
     {
       "id": 3,
       "title": "Star Wars: Rogue One",
       "genre": "Fantasy",
-      "rating": 5
+      "rating": 5,
+      "description": "Set before the events of the original Star Wars, a group of rebels undertake a dangerous mission to steal the plans for the Death Star."
     },
     {
       "id": 4,
       "title": "The Princess and the Frog",
       "genre": "Drama",
-      "rating": 5
+      "rating": 5,
+      "description": "This Disney animated musical follows the journey of Tiana, a hardworking waitress who dreams of opening her own restaurant, and Prince Naveen, who has been turned into a frog by an evil sorcerer."
     },
     {
       "id": 5,
       "title": "Venom",
       "genre": "Thriller",
-      "rating": 5
+      "rating": 5,
+      "description": "When investigative journalist Eddie Brock bonds with an alien symbiote, he gains superhuman powers but also struggles to control his violent alter-ego, Venom."
     }
   ]
 }
