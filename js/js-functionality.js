@@ -1,3 +1,5 @@
+(()=>{
+    "use strict"
 
 /////////////// START Mobile Menu ///////////////////////
 let pageWrapper = document.querySelector('.page-wrapper');
@@ -100,3 +102,14 @@ carouselArrows.forEach(function(arrow){
 });
 /////////////// END Carousel ///////////////////////
 
+// On page load
+window.onload = function() {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector("#loader").style.visibility = "visible";
+    setTimeout(()=>{
+            document.querySelector("#loader").style.display = "none";
+            document.querySelector("body").style.visibility = "visible";
+    }, 3000);
+}
+
+})()
