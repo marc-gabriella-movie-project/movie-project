@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DOM Events Lesson</title>
+    <title>Movie project</title>
     <link rel="stylesheet" href="css/resets.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/movie-project.css" />
@@ -29,8 +29,25 @@
                         <option value="Horror">Horror</option>
                         <option value="Romance">Romance</option>
                     </select>
-                    <label for="rating">Rating:</label>
-                    <input id="rating" type="number" min="0" max="5" placeholder="0-5">
+                    <label>Rating: </label>
+                    <div class="rating-add">
+                        <label for="rating-1">1</label>
+                        <input type="radio" name="rating" id="rating-1" value="1">
+
+                        <label for="rating-2">2</label>
+                        <input type="radio" name="rating" id="rating-2" value="2">
+
+                        <label for="rating-3">3</label>
+                        <input type="radio" name="rating" id="rating-3" value="3">
+
+                        <label for="rating-4">4</label>
+                        <input type="radio" name="rating" id="rating-4" value="4">
+
+                        <label for="rating-5">5</label>
+                        <input type="radio" name="rating" id="rating-5" value="5">
+                    </div>
+                    <label for="movie-description"></label>
+                    <textarea id="movie-description" name="movie-description" rows="10" cols="30" placeholder="Enter a description for your movie"></textarea>
                     <button id="add-movie-btn">Add movie</button>
                 </div>
             </div>
@@ -88,6 +105,7 @@
                 <div class="carousel">
                     <div class="slide-mask justify-center">
                         <div class="slide left">
+                            <!--Start movie Card-->
                             <div id="movie1" class="movie-poster">
                                 <div class="image-wrapper">
                                     <img src="images/IT_ends_chapter-two.jpg" alt="scary clown">
@@ -124,8 +142,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--end movie Card-->
                         </div>
                         <div class="slide left">
+                            <!--Start movie Card-->
                             <div id="movie2" class="movie-poster">
                                 <div class="image-wrapper">
                                     <img src="images/princess_Frog_Poster.jpg" alt="scary clown">
@@ -162,8 +182,11 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--end movie Card-->
                         </div>
+
                         <div class="slide active">
+                            <!--Start movie Card-->
                             <div id="movie3" class="movie-poster">
                                 <div class="image-wrapper">
                                     <img src="images/starwars_TROS_Poster.jpg" alt="scary clown">
@@ -200,8 +223,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--end movie Card-->
                         </div>
                         <div class="slide right">
+                            <!--Start movie Card-->
                             <div id="movie4" class="movie-poster">
                                 <div class="image-wrapper">
                                     <img src="images/starwars_RogueOne_Poster.jpg" alt="scary clown">
@@ -238,8 +263,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--end movie Card-->
                         </div>
                         <div class="slide right">
+                            <!--Start movie Card-->
                             <div id="movie5" class="movie-poster">
                                 <div class="image-wrapper">
                                     <img src="images/venom_Poster.jpg" alt="scary clown">
@@ -276,8 +303,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--end movie Card-->
                         </div>
                         <div class="slide right">
+                            <!--Start movie Card-->
                             <div id="movie6" class="movie-poster">
                                 <div class="image-wrapper">
                                     <img src="images/IT_ends_chapter-two.jpg" alt="scary clown">
@@ -314,6 +343,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--end movie Card-->
                         </div>
                     </div>
                     <div class="slide-arrow-wrapper left"><img src="images/arrow.svg" class="slide-arrow left" /></div>
@@ -334,6 +364,14 @@
             <div class="column justify-center align-center">
                 <div class="grid-image-wrapper">
                     <img src="images/princess_Frog_Poster.jpg" alt="" class="grid-poster">
+                    <div class="grid-btns">
+                        <div class="remove-btn">
+                            A
+                        </div>
+                        <div class="edit-btn">
+                            B
+                        </div>
+                    </div>
                 </div>
                 <h2>The title</h2>
             </div>
