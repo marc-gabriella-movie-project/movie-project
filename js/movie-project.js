@@ -1,10 +1,12 @@
 // import {keys} from "./keys.js"
 import * as moviesUtils from "./moviesUtilities.js"
+import {renderFavorites} from "./moviesUtilities.js";
 
 (async()=> {
     let allFavorites = await moviesUtils.getFavorites();
     console.log(allFavorites);
-
+    let parent = document.querySelector(".slide-mask")
+    await renderFavorites(allFavorites, parent)
 
     // add a movie
     document.querySelector('#add-movie-btn').addEventListener('click', async function(event){
@@ -32,5 +34,8 @@ import * as moviesUtils from "./moviesUtilities.js"
 
     // remove a movie from favorites database
 
+    // document.querySelector('.remove-btn').addEventListener('click',function (){
+    //     moviesUtils.removeMovie()
+    // });
 
 })();

@@ -13,7 +13,7 @@
       "title": "Star Wars: The Rise of Skywalker",
       "genre": "Fantasy",
       "rating": 5,
-      "image_url": "images/IT_ends_chapter-two.jpg",
+      "image_url": "images/starwars_TROS_Poster.jpg",
       "description": "The final chapter of the Skywalker saga sees the Resistance face off against the First Order one last time, while Rey confronts her own destiny."
     },
     {
@@ -21,7 +21,7 @@
       "title": "Star Wars: Rogue One",
       "genre": "Fantasy",
       "rating": 5,
-      "image_url": "images/IT_ends_chapter-two.jpg",
+      "image_url": "images/starwars_RogueOne_Poster.jpg",
       "description": "Set before the events of the original Star Wars, a group of rebels undertake a dangerous mission to steal the plans for the Death Star."
     },
     {
@@ -29,7 +29,7 @@
       "title": "The Princess and the Frog",
       "genre": "Drama",
       "rating": 5,
-      "image_url": "images/IT_ends_chapter-two.jpg",
+      "image_url": "images/princess_Frog_Poster.jpg",
       "description": "This Disney animated musical follows the journey of Tiana, a hardworking waitress who dreams of opening her own restaurant, and Prince Naveen, who has been turned into a frog by an evil sorcerer."
     },
     {
@@ -37,7 +37,7 @@
       "title": "Venom",
       "genre": "Thriller",
       "rating": 5,
-      "image_url": "images/IT_ends_chapter-two.jpg",
+      "image_url": "images/venom_Poster.jpg",
       "description": "When investigative journalist Eddie Brock bonds with an alien symbiote, he gains superhuman powers but also struggles to control his violent alter-ego, Venom."
     }
   ],
