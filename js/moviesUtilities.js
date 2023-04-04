@@ -116,6 +116,22 @@ export const removeMovie = async(movie) => {
         console.log(error);
     }
 }
+//event listener for removing an element
+export const removeFromFavorites = async (moviesDB, parent)=> {
+// Add an event listener to the parent element
+    const removeBtn = document.querySelector('.remove-btn')
+    removeBtn.addEventListener('click', (event)=> {
+        if (event.target.classList.contains('remove-btn')){
+            const movieElement = event.target.closest('.slide');
+            const movie = JSON.parse(movieElement.dataset.movie)
+            removeMovie(movie)
+            movieElement.remove();
+        }
+    });
+// Call the renderFavorites function to display the initial list of favorites
+    await renderFavorites(moviesDB, parent);
+}
+
 //renders favorites
 export const renderFavorites = async (movies, parent)=> {
     movies.forEach(movie => {
@@ -165,15 +181,6 @@ export const renderFavorites = async (movies, parent)=> {
                             </div>
         `;
         parent.appendChild(element)
-
-        //add event listener
-        const removeButton = element.querySelector('.remove-btn');
-        removeButton.addEventListener('click', async (event) => {
-            event.preventDefault();
-            const movieId = movie.id;
-            await removeMovie({id: movieId});
-            element.remove();
-        });
     });
 }
 
@@ -197,5 +204,4 @@ export const renderMovies = async (movies, parent) => {
         parent.appendChild(element)
     });
 }
-
 // renderCarousel
