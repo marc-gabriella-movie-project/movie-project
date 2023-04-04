@@ -51,9 +51,9 @@ export const searchFavorite = async(movie) => {
 }
 
 //setters
-export const setFavorite = async (movie) => {
+export const setMovie = async (movie) => {
     try {
-        let url = `http://localhost:3000/favorites`;
+        let url = `http://localhost:3000/movies`;
         let options = {
             method: "POST",
             headers: {
@@ -109,5 +109,45 @@ export const removeMovie = async(id) => {
         console.log(error);
     }
 }
-//renders
+//renders favorites
+export const renderFavorites = async ()=>{
+    const element = document.createElement('div');
+    element.classList.add('movie-poster');
+    element.innerHTML =
+        `<div class="image-wrapper">
+            <img src=${} alt="scary clown">
+        </div>
+        <div class="movie-details">
+            <strong>IT Chapter Two (2019)</strong>
+            <div class="rating">
+                <!--star-->
+                <a href="#">
+                    <i class="fas fa-star"></i>
+                </a>
+                <!--star-->
+                <a href="#">
+                    <i class="fas fa-star"></i>
+                </a>
+                <!--star-->
+                <a href="#">
+                    <i class="fas fa-star"></i>
+                </a>
+                <!--star-->
+                <a href="#">
+                    <i class="fas fa-star"></i>
+                </a>
+                <!-- empty star-->
+                <a href="#">
+                    <i class="far fa-star"></i>
+                </a>
+            </div>
+            <!--movie details in depth-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi aperiam, beatae debitis distinctio harum necessitatibus neque provident quo reiciendis repellat sunt tempora unde! Commodi facere illum iure totam vel!</p>
+            <div class="card-btns">
+                <a href="#" class="trailer-btn">Watch Trailer</a>
+                <a href="#" class="play-btn"><i class="fas fa-play"></i> Play Now</a>
+            </div> `
+}
+
+
 // renderCarousel
