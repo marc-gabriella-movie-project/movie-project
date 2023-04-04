@@ -1,4 +1,3 @@
-(()=>{
     "use strict"
 
 /////////////// START Mobile Menu ///////////////////////
@@ -109,7 +108,6 @@ window.onload = function() {
     setTimeout(()=>{
             document.querySelector("#loader").style.display = "none";
             document.querySelector("body").style.visibility = "visible";
-    }, 3000);
+    }, 1000);
 }
 
-})()

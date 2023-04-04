@@ -1,5 +1,3 @@
-(()=>{
-    "use strict"
 
 // getters
 export const getFavorites = async () => {
@@ -118,7 +116,10 @@ export const removeMovie = async(movie) => {
     } catch(error){
         console.log(error);
     }
+    const favorites = await getFavorites()
+    renderFavorites(favorites)
 }
+
 //renders favorites
 export const renderFavorites = async (movies, parent)=> {
     movies.forEach(movie => {
@@ -132,7 +133,9 @@ export const renderFavorites = async (movies, parent)=> {
         <div class="movie-poster">
                                 <div class="image-wrapper">
                                     <img src="${movie.image_url}" alt="scary clown">
-                                    <button title="Remove from favorites" class="remove-btn">X</button>
+                                    <button title="Remove from favorites" class="remove-btn">
+                                        <img id="trash" src="images/trashcan-2.webp" alt="trash">
+                                    </button>
                                 </div>
                                 <div class="movie-details">
                                     <strong>${movie.title}</strong>
@@ -202,6 +205,3 @@ export const renderMovies = async (movies, parent) => {
 }
 
 // renderCarousel
-
-})()
-

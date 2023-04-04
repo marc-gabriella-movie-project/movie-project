@@ -263,18 +263,6 @@ img.slide-arrow.right {
 .movie-poster .image-wrapper img {
     position: relative;
 }
-.remove-btn {
-    position: absolute;
-    top: 55px;
-    left: 150px;
-    z-index: 10;
-    background-color: #f50101;
-    border-radius: 99999px;
-    height: 35px;
-    width: 35px;
-}
-
-
 .edit-btn {
     position: absolute;
     top: 25px;
@@ -382,6 +370,15 @@ img.slide-arrow.right {
     color: #fff;
     border: none;
     opacity: 1;
+}
+#trash {
+    position: absolute;
+    top: 55px;
+    left: 150px;
+    z-index: 10;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
 }
 /* loading symbol on page load */
 #loader {

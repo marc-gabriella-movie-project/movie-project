@@ -41,9 +41,8 @@ import {renderFavorites, renderMovies} from "./moviesUtilities.js";
     });
 
     // remove a movie from favorites database
-
-    // document.querySelector('.remove-btn').addEventListener('click',function (){
-    //     moviesUtils.removeMovie()
-    // });
+    document.querySelector('.remove-btn').addEventListener('click',function (){
+        moviesUtils.removeMovie()
+    });
 
 })();

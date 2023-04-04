@@ -1,14 +1,6 @@
 {
   "favorites": [
     {
-      "id": 1,
-      "title": "IT ends: Chapter Two",
-      "genre": "Horror",
-      "rating": 5,
-      "image_url": "images/IT_ends_chapter-two.jpg",
-      "description": "In this horror sequel, the members of the Losers Club return to Derry, Maine to confront the evil entity that terrorized them as children."
-    },
-    {
       "id": 2,
       "title": "Star Wars: The Rise of Skywalker",
       "genre": "Fantasy",
@@ -81,13 +73,6 @@
       "rating": 5,
       "image_url": "images/venom_Poster.jpg",
       "description": "When investigative journalist Eddie Brock bonds with an alien symbiote, he gains superhuman powers but also struggles to control his violent alter-ego, Venom."
-    },
-    {
-      "title": "Hunters Movie",
-      "genre": "Crime",
-      "rating": "4",
-      "description": "Hunters movie is a crime movie about crime.",
-      "id": 6
     }
   ]
 }
