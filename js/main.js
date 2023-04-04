@@ -1,3 +1,5 @@
+"use strict"
+
 // import {keys} from "./keys.js"
 import * as moviesUtils from "./moviesUtilities.js"
 import {renderFavorites, renderMovies} from "./moviesUtilities.js";

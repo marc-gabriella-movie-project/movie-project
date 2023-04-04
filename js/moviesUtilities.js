@@ -1,3 +1,6 @@
+(()=>{
+    "use strict"
+
 // getters
 export const getFavorites = async () => {
     try {
@@ -199,3 +202,6 @@ export const renderMovies = async (movies, parent) => {
 }
 
 // renderCarousel
+
+})()
+
