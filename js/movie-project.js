@@ -1,6 +1,6 @@
 // import {keys} from "./keys.js"
 import * as moviesUtils from "./moviesUtilities.js"
-import {renderFavorites, renderMovies} from "./moviesUtilities.js";
+import {getFavorites, removeMovie, renderFavorites, renderMovies} from "./moviesUtilities.js";
 
 (async()=> {
 
@@ -8,12 +8,13 @@ import {renderFavorites, renderMovies} from "./moviesUtilities.js";
     let allFavorites = await moviesUtils.getFavorites();
     console.log(allFavorites);
     let parent = document.querySelector(".slide-mask")
-    await renderFavorites(allFavorites, parent)
+    await moviesUtils.renderFavorites(allFavorites, parent)
 
     let allMovies = await moviesUtils.getMovies();
     let moviesRow = document.querySelector('#grid-row')
-    await renderMovies(allMovies, moviesRow)
+    await moviesUtils.renderMovies(allMovies, moviesRow)
 
+    await moviesUtils.removeFromFavorites(allFavorites,parent)
     // add a movie
     document.querySelector('#add-movie-btn').addEventListener('click', async function(event){
         const title = document.querySelector('#title').value;
@@ -37,8 +38,6 @@ import {renderFavorites, renderMovies} from "./moviesUtilities.js";
         let result = await moviesUtils.setMovie(movieData);
         console.log(result)
     });
-
-    // remove a movie from favorites database
 
     // document.querySelector('.remove-btn').addEventListener('click',function (){
     //     moviesUtils.removeMovie()

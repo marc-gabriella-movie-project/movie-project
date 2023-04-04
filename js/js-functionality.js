@@ -100,3 +100,17 @@ carouselArrows.forEach(function(arrow){
 });
 /////////////// END Carousel ///////////////////////
 
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("#loader").style.visibility = "visible";
+    } else {
+        // Add a delay of 3 seconds before hiding the loader and displaying the page content
+        setTimeout(function() {
+            document.querySelector("#loader").style.display = "none";
+            document.querySelector("body").style.visibility = "visible";
+        }, 3000);
+    }
+};
+
+
