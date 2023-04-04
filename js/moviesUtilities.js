@@ -9,6 +9,16 @@ export const getFavorites = async () => {
         console.log(error);
     }
 };
+export const getMovies = async () => {
+    try {
+        let url = `http://localhost:3000/movies`;
+        let response = await fetch(url);
+        let data = await response.json();
+        return data;
+    } catch(error){
+        console.log(error);
+    }
+};
 
 export const getFavoritesByID = async (id) => {
     try {
@@ -167,5 +177,25 @@ export const renderFavorites = async (movies, parent)=> {
     });
 }
 
+export const renderMovies = async (movies, parent) => {
+    movies.forEach(movie => {
+        const element = document.createElement('div');
+        element.classList.add("column")
+        element.classList.add("justify-center")
+        element.classList.add("align-center")
+        element.innerHTML = `
+                <div class="grid-image-wrapper">
+                    <img src="${movie.image_url}" alt="" class="grid-poster">
+                    <div class="grid-btns">
+                        <div class="edit-btn">
+                            B
+                        </div>
+                    </div>
+                </div>
+                <h2>${movie.title}</h2>
+        `;
+        parent.appendChild(element)
+    });
+}
 
 // renderCarousel

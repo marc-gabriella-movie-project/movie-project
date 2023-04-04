@@ -1,12 +1,18 @@
 // import {keys} from "./keys.js"
 import * as moviesUtils from "./moviesUtilities.js"
-import {renderFavorites} from "./moviesUtilities.js";
+import {renderFavorites, renderMovies} from "./moviesUtilities.js";
 
 (async()=> {
+
+    //favorites
     let allFavorites = await moviesUtils.getFavorites();
     console.log(allFavorites);
     let parent = document.querySelector(".slide-mask")
     await renderFavorites(allFavorites, parent)
+
+    let allMovies = await moviesUtils.getMovies();
+    let moviesRow = document.querySelector('#grid-row')
+    await renderMovies(allMovies, moviesRow)
 
     // add a movie
     document.querySelector('#add-movie-btn').addEventListener('click', async function(event){
