@@ -81,13 +81,6 @@
       "rating": 5,
       "image_url": "images/venom_Poster.jpg",
       "description": "When investigative journalist Eddie Brock bonds with an alien symbiote, he gains superhuman powers but also struggles to control his violent alter-ego, Venom."
-    },
-    {
-      "title": "Hunters Movie",
-      "genre": "Crime",
-      "rating": "4",
-      "description": "Hunters movie is a crime movie about crime.",
-      "id": 6
     }
   ]
 }

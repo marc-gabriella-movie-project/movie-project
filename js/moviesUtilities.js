@@ -203,17 +203,30 @@ export const renderFavorites = async (movies, parent)=> {
 export const renderMovies = async (movies, parent) => {
     movies.forEach(movie => {
         const element = document.createElement('div');
-        element.classList.add("column")
-        element.classList.add("justify-center")
-        element.classList.add("align-center")
+        element.classList.add("column");
+        element.classList.add("justify-center");
+        element.classList.add("align-center");
         element.innerHTML = `
                 <div class="grid-image-wrapper">
                     <img src="${movie.image_url}" alt="" class="grid-poster">
                 </div>
                 <h2>${movie.title}</h2>
         `;
-        parent.appendChild(element)
+        parent.appendChild(element);
     });
+}
+
+export const renderMovie = async (movie, parent) => {
+    const element = document.createElement('div');
+    element.classList.add("column");
+    element.classList.add("justify-center");
+    element.classList.add("align-center");
+    element.innerHTML =
+        `<div class="grid-image-wrapper">
+            <img src="${movie.image_url}" alt="" class="grid-poster">
+         </div>
+         <h2>${movie.title}</h2>`;
+    parent.appendChild(element);
 }
 
 export const userPatchSubmit = async (event) => {
