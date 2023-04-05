@@ -43,10 +43,12 @@ import * as moviesUtils from "./moviesUtilities.js"
     console.log(removeButtons);
     for (let i = 0; i < removeButtons.length; i++){
         removeButtons[i].addEventListener('click', async ()=>{
+            confirm('Are you sure you want to delete this movie?')
             console.log([i]);
             console.log(allFavorites[i].id)
             await moviesUtils.removeMovie(allFavorites[i].id);
-            await moviesUtils.renderFavorite(allFavorites[i]);
+            let reRenderedFavorites = await moviesUtils.getFavorites();
+            await moviesUtils.renderFavorites(reRenderedFavorites, parent);
         });
     }
 

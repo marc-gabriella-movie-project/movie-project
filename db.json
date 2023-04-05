@@ -81,6 +81,126 @@
       "rating": 5,
       "image_url": "images/venom_Poster.jpg",
       "description": "When investigative journalist Eddie Brock bonds with an alien symbiote, he gains superhuman powers but also struggles to control his violent alter-ego, Venom."
+    },
+    {
+      "id": 6,
+      "title": "Spider-Man: No Way Home",
+      "genre": "Action",
+      "rating": 5,
+      "image_url": "images/spiderman_nowayhome_poster.jpg",
+      "description": "Peter Parker teams up with Doctor Strange to navigate multiple parallel universes and stop a threat that could destroy all of reality."
+    },
+    {
+      "id": 7,
+      "title": "The Matrix Resurrections",
+      "genre": "Science Fiction",
+      "rating": 4.5,
+      "image_url": "images/matrix_resurrections_poster.jpeg",
+      "description": "The long-awaited fourth installment in the Matrix franchise sees Neo trapped in a simulated reality, as he fights to regain his memories and escape with the help of a new ally."
+      },
+    {
+      "id": 8,
+      "title": "Jungle Cruise",
+      "genre": "Adventure",
+      "rating": 4,
+      "image_url": "images/junglecruise_poster.jpeg",
+      "description": "A riverboat captain and a scientist go on a thrilling journey through the Amazon jungle, encountering dangerous wildlife and supernatural forces along the way."
+    },
+    {
+      "id": 9,
+      "title": "The Suicide Squad",
+      "genre": "Action",
+      "rating": 4,
+      "image_url": "images/suicidesquad_poster.jpeg",
+      "description": "A team of DC Comics supervillains are sent on a dangerous mission by the government, with the promise of reduced prison sentences if they succeed."
+      },
+    {
+      "id": 10,
+      "title": "Dune",
+      "genre": "Science Fiction",
+      "rating": 4.5,
+      "image_url": "images/dune_poster.jpeg",
+      "description": "In a distant future, a noble family must navigate a hostile desert planet and its warring factions to secure their control over a valuable resource known as 'spice.'"
+      },
+    {
+      "id": 11,
+      "title": "Black Widow",
+      "genre": "Action",
+      "rating": 4,
+      "image_url": "images/blackwidow_poster.jpeg",
+      "description": "The Marvel Cinematic Universe's long-awaited standalone film for Black Widow sees the Avenger go on the run after the events of 'Captain America: Civil War.'"
+      },
+    {
+      "id": 12,
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "genre": "Action",
+      "rating": 4.5,
+      "image_url": "images/shangchi_poster.webp",
+      "description": "The first Asian-led superhero film in the MCU sees Shang-Chi confront his father, the leader of the Ten Rings organization, and save the world from their dangerous influence."
+      },
+    {
+      "id": 13,
+      "title": "No Time to Die",
+      "genre": "Action",
+      "rating": 4,
+      "image_url": "images/notimetodie_poster.jpeg",
+      "description": "Daniel Craig's final outing as James Bond sees the spy come out of retirement to track down a missing scientist, leading him to confront a new threat to global security."
+      },
+    {
+      "id": 14,
+      "title": "Tenet",
+      "genre": "Action",
+      "rating": 4.5,
+      "image_url": "images/tenet_Poster.jpeg",
+      "description": "A secret agent embarks on a dangerous mission to prevent World War III by reversing the flow of time."
+    },
+    {
+      "id": 15,
+      "title": "Soul",
+      "genre": "Animation",
+      "rating": 4.5,
+      "image_url": "images/soul_Poster.jpg",
+      "description": "A middle-school band teacher gets the chance of a lifetime to play at the best jazz club in town, but an accident causes his soul to be separated from his body, sending him on a journey through the afterlife."
+    },
+    {
+      "id": 16,
+      "title": "Joker",
+      "genre": "Thriller",
+      "rating": 4.5,
+      "image_url": "images/joker_Poster.jpeg",
+      "description": "A failed comedian in Gotham City turns to a life of crime and becomes the infamous villain known as the Joker."
+    },
+    {
+      "id": 17,
+      "title": "Spider-Man: Into the Spider-Verse",
+      "genre": "Animation",
+      "rating": 4.5,
+      "image_url": "images/spiderman_into_spiderverse_Poster.jpg",
+      "description": "Teenage superhero Miles Morales teams up with other Spider-People from different dimensions to stop a threat to all of reality."
+    },
+    {
+      "id": 18,
+      "title": "La La Land",
+      "genre": "Musical",
+      "rating": 4.5,
+      "image_url": "images/la_la_land_Poster.jpeg",
+      "description": "A struggling actress and a jazz pianist fall in love while pursuing their dreams in Los Angeles."
+    },
+    {
+      "id": 19,
+      "title": "Avengers: Endgame",
+      "genre": "Action",
+      "rating": 4.5,
+      "image_url": "images/avengers_endgame_Poster.webp",
+      "description": "The Avengers assemble one last time to undo the damage caused by Thanos and restore the universe to its former state."
+    },
+    {
+      "id": 20,
+      "title": "Inception",
+      "genre": "Sci-Fi",
+      "rating": 5,
+      "image_url": "images/inception_Poster.jpeg",
+      "description": "A thief with the ability to enter people's dreams is hired to plant an idea in the mind of a corporate heir, but the mission proves to be more complex and dangerous than he anticipated."
     }
   ]
 }

@@ -197,7 +197,7 @@ export const renderFavorites = async (movies, parent)=> {
     });
 }
 
-export const renderFavorite = async (movies, parent)=> {
+export const renderFavorite = async (movie, parent)=> {
         const element = document.createElement('div');
         if (movie.id === 1) {
             element.classList.add('slide', 'active')
