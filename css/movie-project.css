@@ -265,7 +265,7 @@ img.slide-arrow.right {
 }
 .remove-btn {
     position: absolute;
-    top: 55px;
+    top: 16px;
     left: 150px;
     z-index: 10;
     background-color: #f50101;

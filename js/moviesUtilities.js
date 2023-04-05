@@ -116,14 +116,11 @@ export const patchFavorite = async (id, movie) => {
     }
 }
 
-export const removeMovie = async(movie) => {
+export const removeMovie = async(id) => {
     try {
-        let url = `http://localhost:3000/favorites/${movie.id}`;
+        let url = `http://localhost:3000/favorites/${id}`;
         let options = {
-            method: "DELETE",
-            headers: {
-                "Content-Type":"application/json"
-            }
+            method: "DELETE"
         };
         let response = await fetch(url, options);
         let data = await response.json();
@@ -133,20 +130,20 @@ export const removeMovie = async(movie) => {
     }
 }
 //event listener for removing an element
-export const removeFromFavorites = async (moviesDB, parent)=> {
-// Add an event listener to the parent element
-    const removeBtn = document.querySelector('.remove-btn')
-    removeBtn.addEventListener('click', (event)=> {
-        if (event.target.classList.contains('remove-btn')){
-            const movieElement = event.target.closest('.slide');
-            const movie = JSON.parse(movieElement.dataset.movie)
-            removeMovie(movie)
-            movieElement.remove();
-        }
-    });
-// Call the renderFavorites function to display the initial list of favorites
-    await renderFavorites(moviesDB, parent);
-}
+// export const removeFromFavorites = async (moviesDB, parent)=> {
+// // Add an event listener to the parent element
+//     const removeBtn = document.querySelector('.remove-btn')
+//     removeBtn.addEventListener('click', (event)=> {
+//         if (event.target.classList.contains('remove-btn')){
+//             const movieElement = event.target.closest('.slide');
+//             const movie = JSON.parse(movieElement.dataset.movie)
+//             removeMovie(movie)
+//             movieElement.remove();
+//         }
+//     });
+// // Call the renderFavorites function to display the initial list of favorites
+//     await renderFavorites(moviesDB, parent);
+// }
 
 //renders favorites
 export const renderFavorites = async (movies, parent)=> {
@@ -199,6 +196,56 @@ export const renderFavorites = async (movies, parent)=> {
         parent.appendChild(element)
     });
 }
+
+export const renderFavorite = async (movies, parent)=> {
+        const element = document.createElement('div');
+        if (movie.id === 1) {
+            element.classList.add('slide', 'active')
+        } else {
+            element.classList.add('slide', 'right')
+        }
+        element.innerHTML = `
+        <div class="movie-poster">
+                                <div class="image-wrapper">
+                                    <img src="${movie.image_url}" alt="scary clown">
+                                    <button title="Remove from favorites" class="remove-btn">X</button>
+                                </div>
+                                <div class="movie-details">
+                                    <strong>${movie.title}</strong>
+                                    <div class="rating">
+                                        <!--star-->
+                                        <a href="#">
+                                            <i class="fas fa-star"></i>
+                                        </a>
+                                        <!--star-->
+                                        <a href="#">
+                                            <i class="fas fa-star"></i>
+                                        </a>
+                                        <!--star-->
+                                        <a href="#">
+                                            <i class="fas fa-star"></i>
+                                        </a>
+                                        <!--star-->
+                                        <a href="#">
+                                            <i class="fas fa-star"></i>
+                                        </a>
+                                        <!-- empty star-->
+                                        <a href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </div>
+                                    <!--movie details in depth-->
+                                    <p>${movie.description}</p>
+                                    <div class="card-btns">
+                                        <a href="#" class="trailer-btn">Watch Trailer</a>
+                                        <a href="#" class="play-btn"><i class="fas fa-play"></i> Play Now</a>
+                                    </div>
+                                </div>
+                            </div>
+        `;
+        parent.appendChild(element)
+}
+
 
 export const renderMovies = async (movies, parent) => {
     movies.forEach(movie => {

@@ -1,13 +1,5 @@
 // import {keys} from "./keys.js"
 import * as moviesUtils from "./moviesUtilities.js"
-import {
-    getFavorites,
-    removeMovie,
-    renderFavorites,
-    renderMovie,
-    renderMovies,
-    userPatchSubmit
-} from "./moviesUtilities.js";
 
 (async()=> {
 
@@ -21,8 +13,6 @@ import {
     let allMovies = await moviesUtils.getMovies();
     let moviesRow = document.querySelector('#grid-row')
     await moviesUtils.renderMovies(allMovies, moviesRow)
-
-    await moviesUtils.removeFromFavorites(allFavorites,parent)
 
     // add a movie
     document.querySelector('#add-movie-btn').addEventListener('click', async function(event){
@@ -45,16 +35,22 @@ import {
             description
         };
         let result = await moviesUtils.setMovie(movieData);
-        await renderMovie(result, moviesRow);
+        await moviesUtils.renderMovie(result, moviesRow);
     });
 
     // remove a movie
-    document.querySelector('.remove-btn').addEventListener('click',async function (e){
-        console.log(e);
-        await moviesUtils.removeMovie()
-    });
+    let removeButtons = document.querySelectorAll('.remove-btn');
+    console.log(removeButtons);
+    for (let i = 0; i < removeButtons.length; i++){
+        removeButtons[i].addEventListener('click', async ()=>{
+            console.log([i]);
+            console.log(allFavorites[i].id)
+            await moviesUtils.removeMovie(allFavorites[i].id);
+            await moviesUtils.renderFavorite(allFavorites[i]);
+        });
+    }
 
     let editBtn = document.querySelector('#patch-button')
-    editBtn.addEventListener('click', userPatchSubmit)
+    editBtn.addEventListener('click', moviesUtils.userPatchSubmit)
 
 })();
