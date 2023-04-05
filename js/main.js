@@ -28,6 +28,7 @@ import * as moviesUtils from "./moviesUtilities.js"
         let movieData = {
             title,
             genre,
+            image_url: "images/no_Image_Available.jpg",
             rating,
             description
         };
