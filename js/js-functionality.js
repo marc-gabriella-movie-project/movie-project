@@ -1,5 +1,5 @@
 
-/////////////// START Mobile Menu ///////////////////////
+// Mobile Menu/Sidebar js
 let pageWrapper = document.querySelector('.page-wrapper');
 let toggleMenu = document.querySelector('.burger-wrapper');
 let menuBg = document.querySelector('.mobile-menu-overlay');
@@ -9,9 +9,8 @@ toggleMenu.addEventListener('click', function(){
 menuBg.addEventListener('click', function(){
     pageWrapper.classList.toggle('mobile-menu-open');
 });
-/////////////// END Mobile Menu ///////////////////////
 
-/////////////// START Dropdowns ///////////////////////
+// Header dropdowns js
 let dropdowns = document.querySelectorAll('[data-dropdown="parent"]');
 dropdowns.forEach(function(dropdown){
     let toggle = dropdown.querySelector('[data-dropdown="toggle"]');
@@ -33,29 +32,20 @@ pageWrapper.addEventListener('click', function(event){
         });
     }
 });
-/////////////// END Dropdowns ///////////////////////
 
-/////////////// START Carousel ///////////////////////
+// Carousel js
 let carouselArrows = document.querySelectorAll('.slide-arrow');
-let carousel = document.querySelector('.carousel');
 let slideMask = document.querySelector('.slide-mask');
 carouselArrows.forEach(function(arrow){
-    // start a direction variable
     let direction;
-    // add event listener to each arrow
     arrow.addEventListener('click', function(event){
-        // if the arrow clicked has a class of left, set direction to left, otherwise set to right
         if (event.target.classList.contains('left')) {
             direction = 'left';
         } else {
             direction = 'right';
         }
-        // console.log(`Going ${direction}`);
-        // get the active slide
         let activeSlide = slideMask.querySelector('.slide.active');
-        // remove active class from active slide
         activeSlide.classList.remove('active');
-        // if direction is left, get previous sibling, otherwise get next sibling and reassign to activeSlide
         if (direction === 'left') {
             activeSlide = activeSlide.previousElementSibling;
         } else {
@@ -63,16 +53,13 @@ carouselArrows.forEach(function(arrow){
         }
         //if activeSlide is null, we are at the end of the carousel
         if (!activeSlide) {
-            //if direction is left, get last slide, otherwise get first slide
             activeSlide = direction === 'left' ? slideMask.lastElementChild : slideMask.firstElementChild;
         }
         //add active to the new active slide
         activeSlide.classList.add('active');
         // remove left and right classes from active slide
         activeSlide.classList.remove('left', 'right');
-        // get previous sibling of active slide
         let previousSibling = activeSlide.previousElementSibling;
-        //get all previous element siblings
         let previousSlides = [];
         while (previousSibling) {
             previousSlides.unshift(previousSibling);
@@ -83,9 +70,7 @@ carouselArrows.forEach(function(arrow){
             slide.classList.remove('right');
             slide.classList.add('left');
         });
-        // get next sibling of active slide
         let nextSibling = activeSlide.nextElementSibling;
-        // get all next element siblings
         let nextSlides = [];
         while (nextSibling) {
             nextSlides.push(nextSibling);
@@ -98,8 +83,8 @@ carouselArrows.forEach(function(arrow){
         });
     });
 });
-/////////////// END Carousel ///////////////////////
 
+// 3 second loading screen on page startup/refresh
 document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
         document.querySelector("body").style.visibility = "hidden";
