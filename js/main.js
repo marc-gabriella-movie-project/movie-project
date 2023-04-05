@@ -47,6 +47,7 @@ import * as moviesUtils from "./moviesUtilities.js"
             console.log([i]);
             console.log(allFavorites[i].id)
             await moviesUtils.removeMovie(allFavorites[i].id);
+            parent.innerHTML = ``
             let reRenderedFavorites = await moviesUtils.getFavorites();
             await moviesUtils.renderFavorites(reRenderedFavorites, parent);
         });
@@ -54,5 +55,4 @@ import * as moviesUtils from "./moviesUtilities.js"
 
     let editBtn = document.querySelector('#patch-button')
     editBtn.addEventListener('click', moviesUtils.userPatchSubmit)
-
 })();

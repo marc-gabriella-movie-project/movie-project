@@ -97,7 +97,7 @@
       "rating": 4.5,
       "image_url": "images/matrix_resurrections_poster.jpeg",
       "description": "The long-awaited fourth installment in the Matrix franchise sees Neo trapped in a simulated reality, as he fights to regain his memories and escape with the help of a new ally."
-      },
+    },
     {
       "id": 8,
       "title": "Jungle Cruise",
@@ -113,7 +113,7 @@
       "rating": 4,
       "image_url": "images/suicidesquad_poster.jpeg",
       "description": "A team of DC Comics supervillains are sent on a dangerous mission by the government, with the promise of reduced prison sentences if they succeed."
-      },
+    },
     {
       "id": 10,
       "title": "Dune",
@@ -121,7 +121,7 @@
       "rating": 4.5,
       "image_url": "images/dune_poster.jpeg",
       "description": "In a distant future, a noble family must navigate a hostile desert planet and its warring factions to secure their control over a valuable resource known as 'spice.'"
-      },
+    },
     {
       "id": 11,
       "title": "Black Widow",
@@ -129,7 +129,7 @@
       "rating": 4,
       "image_url": "images/blackwidow_poster.jpeg",
       "description": "The Marvel Cinematic Universe's long-awaited standalone film for Black Widow sees the Avenger go on the run after the events of 'Captain America: Civil War.'"
-      },
+    },
     {
       "id": 12,
       "title": "Shang-Chi and the Legend of the Ten Rings",
@@ -137,7 +137,7 @@
       "rating": 4.5,
       "image_url": "images/shangchi_poster.webp",
       "description": "The first Asian-led superhero film in the MCU sees Shang-Chi confront his father, the leader of the Ten Rings organization, and save the world from their dangerous influence."
-      },
+    },
     {
       "id": 13,
       "title": "No Time to Die",
@@ -145,7 +145,7 @@
       "rating": 4,
       "image_url": "images/notimetodie_poster.jpeg",
       "description": "Daniel Craig's final outing as James Bond sees the spy come out of retirement to track down a missing scientist, leading him to confront a new threat to global security."
-      },
+    },
     {
       "id": 14,
       "title": "Tenet",
