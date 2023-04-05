@@ -1,6 +1,6 @@
 // import {keys} from "./keys.js"
 import * as moviesUtils from "./moviesUtilities.js"
-import {getFavorites, removeMovie, renderFavorites, renderMovies} from "./moviesUtilities.js";
+import {getFavorites, removeMovie, renderFavorites, renderMovies, userPatchSubmit} from "./moviesUtilities.js";
 
 (async()=> {
 
@@ -42,5 +42,8 @@ import {getFavorites, removeMovie, renderFavorites, renderMovies} from "./movies
     // document.querySelector('.remove-btn').addEventListener('click',function (){
     //     moviesUtils.removeMovie()
     // });
+
+    let editBtn = document.querySelector('#patch-button')
+    editBtn.addEventListener('click', userPatchSubmit)
 
 })();

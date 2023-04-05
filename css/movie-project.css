@@ -44,7 +44,7 @@ p, h1, h2 {
 }
 
 
-.das-burger-wrapper {
+.burger-wrapper {
     height: 16px;
     width: 27px;
     position: relative;
@@ -70,7 +70,7 @@ p, h1, h2 {
     transition: all ease .3s;
 }
 
-.das-burger-wrapper:hover .menu-line {
+.burger-wrapper:hover .menu-line {
     background-color: rgba(0, 0, 0, 1);
 }
 
@@ -402,4 +402,21 @@ img.slide-arrow.right {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+#patch-button {
+    background-color: #0b7bf7;
+    color: white;
+    border-radius: 30px;
+    width: 50%;
+    align-self: center;
+    opacity: 0.8;
+}
+
+input {
+    border-radius: 10px;
+}
+
+select {
+    border-radius: 10px;
 }
