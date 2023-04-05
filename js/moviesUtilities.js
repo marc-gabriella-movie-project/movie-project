@@ -36,6 +36,22 @@ export const getFavoritesByID = async (id) => {
         console.log(error);
     }
 }
+export const getMoviesByID = async (id) => {
+    try {
+        let url = `http://localhost:3000/movies/${id}`;
+        let options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }
+        let response = await fetch(url, options);
+        let data = await response.json();
+        return data;
+    } catch(error){
+        console.log(error);
+    }
+}
 
 export const searchFavorite = async(movie) => {
     let favorites = await getFavorites();
@@ -193,15 +209,26 @@ export const renderMovies = async (movies, parent) => {
         element.innerHTML = `
                 <div class="grid-image-wrapper">
                     <img src="${movie.image_url}" alt="" class="grid-poster">
-                    <div class="grid-btns">
-                        <div class="edit-btn">
-                            B
-                        </div>
-                    </div>
                 </div>
                 <h2>${movie.title}</h2>
         `;
         parent.appendChild(element)
     });
 }
-// renderCarousel
+
+export const userPatchSubmit = async (event) => {
+    event.preventDefault();
+    let changeID = document.querySelector('#patch-id');
+    let changeTitle = document.querySelector('#patch-title');
+    let changeRating = document.querySelector('#patch-rating');
+    let changeGenre = document.querySelector('#patch-genre');
+    let changeDescription = document.querySelector('#patch-description');
+    let movieToUpdate = await getMoviesByID(changeID.value);
+    let update = {
+        title: changeTitle.value ? changeTitle.value : movieToUpdate.title,
+        genre: changeGenre.value ? changeGenre.value : movieToUpdate.genre,
+        rating: changeRating.value ? changeRating.value: movieToUpdate.rating,
+        description: changeDescription.value ? changeDescription.value: movieToUpdate.description
+    }
+    await patchFavorite(changeID.value,update);
+}
