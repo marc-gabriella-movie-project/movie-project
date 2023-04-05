@@ -113,7 +113,7 @@ export const renderFavorites = async (movies, parent)=> {
                                     <!--movie details in depth-->
                                     <p>${movie.description}</p>
                                     <div class="card-btns">
-                                        <a href="#" class="trailer-btn">Watch Trailer</a>
+                                        <a href="${movie.trailer_url}" target="_blank" class="trailer-btn">Watch Trailer</a>
                                         <a href="#" class="play-btn"><i class="fas fa-play"></i> Play Now</a>
                                     </div>
                                 </div>

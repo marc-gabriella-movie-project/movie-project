@@ -6,6 +6,7 @@
       "genre": "Horror",
       "rating": 5,
       "image_url": "images/IT_ends_chapter-two.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=xhJ5P7Up3jA",
       "description": "In this horror sequel, the members of the Losers Club return to Derry, Maine to confront the evil entity that terrorized them as children."
     },
     {
@@ -14,6 +15,7 @@
       "genre": "Fantasy",
       "rating": 5,
       "image_url": "images/starwars_TROS_Poster.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=8Qn_spdM5Zg",
       "description": "The final chapter of the Skywalker saga sees the Resistance face off against the First Order one last time, while Rey confronts her own destiny."
     },
     {
@@ -22,6 +24,7 @@
       "genre": "Fantasy",
       "rating": 5,
       "image_url": "images/starwars_RogueOne_Poster.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=frdj1zb9sMY",
       "description": "Set before the events of the original Star Wars, a group of rebels undertake a dangerous mission to steal the plans for the Death Star."
     },
     {
@@ -30,6 +33,7 @@
       "genre": "Drama",
       "rating": 5,
       "image_url": "images/princess_Frog_Poster.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=uQBy6jqbmlU",
       "description": "This Disney animated musical follows the journey of Tiana, a hardworking waitress who dreams of opening her own restaurant, and Prince Naveen, who has been turned into a frog by an evil sorcerer."
     },
     {
@@ -38,6 +42,7 @@
       "genre": "Thriller",
       "rating": "3",
       "image_url": "images/venom_Poster.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=u9Mv98Gr5pY",
       "description": "When investigative journalist Eddie Brock bonds with an alien symbiote, he gains superhuman powers but also struggles to control his violent alter-ego, Venom."
     }
   ],
